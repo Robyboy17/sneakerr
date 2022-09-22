@@ -6,6 +6,7 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
   end
 
+
   # GET /reviews/1 or /reviews/1.json
   def show
   end

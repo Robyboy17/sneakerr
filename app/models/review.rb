@@ -4,5 +4,3 @@ class Review < ApplicationRecord
 
   validates :body, presence: true
 end
-
-#soygay
