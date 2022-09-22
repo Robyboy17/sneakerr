@@ -1,0 +1,16 @@
+ <%= turbo_frame_tag @cart, class:'' do %>
+  <details class="relative">
+    <summary>
+      <%= number_to_currency(@cart.total_price) %>
+    </summary>
+    <div class="absolute z-20 w-96 right-0 p-2 bg-white shadow-lg rounded">
+      <div class="divide-y divide-slate-100">
+        <%= render @cart.line_items %>
+      </div>
+      <div class="flex justify-between font-black border-t-2 border-slate-500 p-2">
+        <span class="">Subtotal:</span>
+        <span><%= number_to_currency(@cart.total_price) %></span>
+      </div>
+    </div>
+  </details>
+ <% end %>

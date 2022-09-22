@@ -1,16 +1,16 @@
 <%= form_for :session, url: session_path, html: {class: 'space-y-5'} do |form| %>
   <div class="text-field">
     <%= form.label :email %>
-    <%= form.email_field :email, class: 'block' %>
+    <%= form.email_field :email, class: 'block rounded-lg' %>
   </div>
 
   <div class="password-field">
     <%= form.label :password %>
-    <%= form.password_field :password, class: 'block' %>
+    <%= form.password_field :password, class: 'block rounded-lg' %>
   </div>
 
   <div class="submit-field">
-    <%= form.submit class: 'btn-primary' %>
+    <%= form.submit class: 'btn-primary cursor-pointer' %>
   </div>
 
   <div class="other-links text-sm flex gap-5">
