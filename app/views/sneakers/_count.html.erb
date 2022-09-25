@@ -1,4 +1,4 @@
-<span class="absolute right-2 top-2 flex gap-2 bg-slate-700 text-slate-300 text-sm rounded-full px-2 py-1">
+<span class="absolute right-2 top-2 flex gap-2 bg-slate-700 text-slate-300 text-sm rounded-full px-2 py-1 mt-2 mr-2">
   <%= button_to '+', add_to_cart_path(sneaker), method: :post, class: 'font-bold' %>
   <span><%= @cart.sneaker_count(sneaker) %></span>
   <%= button_to '-', remove_from_cart_path(sneaker), method: :delete, class: 'font-bold'%>

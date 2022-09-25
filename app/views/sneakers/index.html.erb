@@ -1,14 +1,14 @@
-<div class="w-full">
+<div class="w-full bg-gradient-to-r from-slate-500 to-black rounded-lg">
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <div class="flex justify-between items-center">
+  <div class="flex justify-between items-center mx-4">
     <h1 class="font-bold text-4xl">Sneakers</h1>
-    <%= link_to 'New sneaker', new_sneaker_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <%= link_to 'New sneaker', new_sneaker_path, class: "rounded-lg py-2 px-2 bg-blue-600 text-white block font-medium mt-4" %>
   </div>
 
-  <div id="sneakers" class="grid grid-cols-4 gap-10 mt-10">
-    <%= render @sneakers, size: "w-full h-fit object-fit"%>
+  <div id="sneakers" class="grid grid-cols-2 gap-10 mt-10 py-4 px-4 lg:grid-cols-3 xl:grid-cols-4">
+    <%= render @sneakers, class:''%>
   </div>
 </div>
