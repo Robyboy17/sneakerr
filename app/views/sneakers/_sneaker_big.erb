@@ -1,0 +1,22 @@
+<div class="bg-gradient-to-b from-black to-slate-400 rounded-lg p-2 flex relative">
+  <div class="flex p-2">
+    <%= image_tag sneaker.image, class:'rounded-lg object-cover w-[650px] h-[500px]' %>
+    <div class="p-5 mx-4 rounded-lg w-[500px] h-[500px]">
+      <h2 class="font-bold text-white">
+        <%= sneaker.name %>
+      </h2>
+      <span class="font-bold text-green-500 pt-2">
+        <%= number_to_currency(sneaker.price) %>
+        <%= turbo_frame_tag dom_id(sneaker, :items_in_cart) do %>
+          <%= render partial: 'count', locals: {sneaker: sneaker} %>
+        <% end %>
+      </span>
+      <p class="font-bold text-white pt-2">
+        <%= sneaker.brand %>
+      </p>
+      <p class="text-justify text-white pt-2">
+        <%= sneaker.description %>
+      </p>
+    </div>
+  </div>
+</div>
